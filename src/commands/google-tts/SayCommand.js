@@ -38,7 +38,7 @@ class SayCommand extends Command {
     return channel.join()
       .then(() => {
         logger.info(`Joined ${channel.name} in ${guildName}.`);
-        message.channel.send(`Joined ${channel}.`);
+        message.channel.send(`$join`);
         return ttsPlayer.say(args.join(' '), GoogleProvider.NAME);
       });
   }
